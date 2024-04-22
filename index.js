@@ -54,6 +54,7 @@ async function main() {
 	for (let i = 0; i < numAccountsToCreate; i++) {
 		console.log(`- New account ID ${i + 1} (from Record): ${txRec.children[i].receipt.accountId.toString()} \n`);
 		console.log(`- New EVM address ${i + 1} (from Record): 0x${txRec.children[i].evmAddress.toString()} \n`);
+		console.log(`- Child transaction ID: ${txRec.children[i].transactionId.toString()} \n`);
 	}
 	client.close();
 }
